@@ -121,13 +121,16 @@ update: (output, domEl) ->
       html += "</div>"
 
       # check for alerts
-      if task.alert.type == 'OFFSET'
-        html += "<div class='alert'><i class='alert-icon fa fa-bell-o'></i>"
-        if task.alert.repeatStartsOn?
-          html += task.alert.repeatStartsOn
-        else
-          html += task.dueDate
-        html += "</div>"
+      if task.hasOwnProperty('alert')
+        alert = task.alert
+        if alert.hasOwnProperty('type')
+          if alert.type == 'OFFSET'
+            html += "<div class='alert'><i class='alert-icon fa fa-bell-o'></i>"
+            if task.alert.repeatStartsOn?
+              html += task.alert.repeatStartsOn
+            else
+              html += task.dueDate
+            html += "</div>"
 
       html += "</li>"
       # end of single task list item
