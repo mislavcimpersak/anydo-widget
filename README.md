@@ -1,3 +1,11 @@
+# Important!
+
+**This widget was using unofficial and undocumented Any.Do api. Unfortunately, Any.Do team updated their api and with that update this widget became defunct.**
+
+**If at some point Any.Do will give us a public api, I will update this project.**
+
+Cheers
+
 # Any.Do Widget
 
 Made for [Übersicht](http://tracesof.net/uebersicht/)
